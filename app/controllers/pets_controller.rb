@@ -25,6 +25,7 @@ class PetsController < ApplicationController
   end
 
   post '/pets/:id' do
+    @pet = Pet.find(parms[:id])
 
     redirect to "pets/#{@pet.id}"
   end
